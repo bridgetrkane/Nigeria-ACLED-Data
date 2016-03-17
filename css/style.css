@@ -54,7 +54,7 @@ p.main {
 
 .button-next-1 {
     position: absolute;
-    left: 2%;
+    left: 15%;
     top: 80%;
     width:120px;
     background-color: #113B3B;
@@ -88,7 +88,7 @@ p.main {
   background-opacity: 75%;
   color: #D1D0CE;
   z-index: 2000;
-  left: 375px;
+  left: 31%;
   width: 150px;
   top: 125px;
   -moz-border-radius: 7px;
