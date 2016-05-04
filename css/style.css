@@ -62,8 +62,8 @@ p.main {
 .button-previous {
     position: fixed;
     z-index: 100;
-    bottom: 10px;
-    left: 2%;
+    bottom: 50px;
+    left: 5%;
     background-color: #113B3B;
     border: none;
     color: #D1D0CE;
@@ -78,8 +78,8 @@ p.main {
 .button-next-1 {
     position: fixed;
     z-index: 100;
-    bottom: 10px;
-    left: 15%;
+    bottom: 50px;
+    left: 20%;
     width:120px;
     background-color: #113B3B;
     border: none;
@@ -94,8 +94,8 @@ p.main {
 .button-next-rest {
     position: fixed;
     z-index: 100;
-    bottom: 10px;
-    left: 15%;
+    bottom: 50px;
+    left: 20%;
     width: 120px;
     padding: 10px;
     background-color: #113B3B;
@@ -169,8 +169,8 @@ p.main {
 #close {
   position: fixed;
   z-index: 100;
-  bottom: 10px;
-  left: 15%;
+  bottom: 50px;
+  left: 20%;
   width: 140px;
   padding: 10px;
   background-color: #113B3B;
