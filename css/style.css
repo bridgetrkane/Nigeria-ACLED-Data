@@ -1,14 +1,14 @@
 body {
     padding: 5px;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 h1 {
-  color: #FFFFFF;
+  color: #D1D0CE;
+  font-size: 24px;
 }
 
 h2 {
-
   color: #D1D0CE;
 }
 
@@ -17,20 +17,42 @@ p.main {
 }
 
 .map {
-    position: absolute;
+    position: fixed;
     right: 0px;
-    left: 30%;
-    height: 100%;
+    left: 0px;
+    height: 70%;
     top: 0;
 }
 
 .sidebar {
     position: absolute;
-    left: 0;
-    right: 70%;
+    left: 0px;
+    width: 340px;
     top: 0;
     bottom: 0;
-    overflow-y: auto;
+    overflow: visible;
+    padding: 20px;
+}
+
+.street-selected path {
+  -webkit-animation: active 5s ease-out;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes active {
+    0% {opacity: 1;}
+    50% {opacity: 1; stroke-width: 10;}
+    100% {opacity: 1;}
+}
+
+.bottombar {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    height: 27%;
+    left: 0;
+    width: 100%;
+    overflow-y: hidden;
     padding: 20px;
     font-size: 16px;
     background-color: #081C1C;
@@ -38,9 +60,10 @@ p.main {
 }
 
 .button-previous {
-    position: absolute;
+    position: fixed;
+    z-index: 100;
+    bottom: 10px;
     left: 2%;
-    top: 80%;
     background-color: #113B3B;
     border: none;
     color: #D1D0CE;
@@ -53,9 +76,10 @@ p.main {
 
 
 .button-next-1 {
-    position: absolute;
+    position: fixed;
+    z-index: 100;
+    bottom: 10px;
     left: 15%;
-    top: 80%;
     width:120px;
     background-color: #113B3B;
     border: none;
@@ -68,10 +92,10 @@ p.main {
 }
 
 .button-next-rest {
-    position: absolute;
-    align: right;
+    position: fixed;
+    z-index: 100;
+    bottom: 10px;
     left: 15%;
-    top: 80%;
     width: 120px;
     padding: 10px;
     background-color: #113B3B;
@@ -143,10 +167,10 @@ p.main {
 }
 
 #close {
-  position: absolute;
-  align: right;
+  position: fixed;
+  z-index: 100;
+  bottom: 10px;
   left: 15%;
-  top: 80%;
   width: 140px;
   padding: 10px;
   background-color: #113B3B;

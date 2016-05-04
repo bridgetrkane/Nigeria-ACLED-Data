@@ -5,18 +5,28 @@
   <!-- CSS Imports -->
   <link rel="stylesheet" href="css/leaflet.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.css" />
   <link rel="stylesheet" href="css/markercluster.css" />
 </head>
 <body>
   <!-- Sidebar -->
   <div class="sidebar">
+    <h1 style="text-align:center">ACLED Data Points</h1>
+    <div id="shapes"></div>
+  </div>
+
+  <div class="bottombar">
+  <div style="width: 40%; float:left">
     <div id="intro">
-      <h1>Trend Mapping in Nigeria:<br>A Case Study on Conflict Analysis</h1>
-      <h2 id = "info" class="main"></h2>
-      <p id = "info2" class="main"></p>
-      <p id = "info3" class="main"></p>
-      <p id = "link" class="main"><a href="http://www.sfbos.org/">Click here to learn more!</a></p>
-    </div>
+    <h1>Trend Mapping in Nigeria:<br>A Case Study on Conflict Analysis</h1>
+  </div>
+</div>
+  <div style="width: 55%; float:right; padding-right: 40px">
+    <h2 id = "info" class="main"></h2>
+    <p id = "info2" class="main"></p>
+    <p id = "info3" class="main"></p>
+    <p id = "link" class="main"><a href="http://www.sfbos.org/">Click here to learn more!</a></p>
+  </div>
   </div>
   <!-- Legend -->
   <button id="close">RESET MAP</button>
@@ -28,6 +38,8 @@
     <script src="js/jquery-2.2.0.js"></script>
     <script src="js/underscore.js"></script>
     <script src="js/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/points_rand.js"></script>
     <script src="js/leaflet.markercluster-src.js"></script>

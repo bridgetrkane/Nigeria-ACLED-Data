@@ -18,9 +18,10 @@ Setup
 ===================== */
 
 var dataset = 'https://raw.githubusercontent.com/bridgetrkane/webmapping/master/Nigeria.geojson';
-var NGAboundaries = NGAboundaries.geoJSON;
+var data2 = 'https://raw.githubusercontent.com/bridgetrkane/webmapping/master/NGAboundaries.geoJSON';
 var markers;
 var markers = [];
+var polygons = [];
 
 var introText = 'The Armed Conflict Location and Event Data Project (ACLED) maps points of violence across Africa. These points reveal the distribution of violence throughout Nigeria. ';
 var introText2 = 'These slides help to give an overview of such conflicts, proiding information on actors involved, fatalities, notes, and location.';
@@ -116,7 +117,7 @@ $("#previous-button").on("click", function(){
 });
 };
 
-/*var slide3 = function(boundaries){
+var slide3 = function(dataset){
 document.getElementById("previous-button").className = "button-previous";
 document.getElementById("next-button").className = "button-next-rest";
 $("#info").text("Fatalities");
@@ -125,41 +126,10 @@ $("#info3").text(units);
 $("#close").hide();
 $("#legend").hide();
 $("#link").hide();
-$.ajax(boundaries).done(function(data) {
+$.ajax(data2).done(function(data) {
 map.removeLayer(markers);
 var parsedData = JSON.parse(data);
-markers = L.geoJson(parsedData, {
-style: function(feature) {
-  if (feature.properties.FATALITIES <= 1)
-  return {
-    color: "#00B3B3"};
-  if (feature.properties.FATALITIES <= 5)
-  return {
-    color: "#009A9A"};
-  if (feature.properties.FATALITIES <= 10)
-  return {
-    color: "#008080"};
-  if (feature.properties.FATALITIES <= 50)
-  return {
-    color: "#006767"};
-  if (feature.properties.FATALITIES <= 100)
- return {
-    color: "#004D4D"};
-  if (feature.properties.FATALITIES <= 600)
-  return {
-    color: "#003434"};
-  else
-  return {
-    color: "#CEFFFF"};
-  },
-pointToLayer: function(feature, latlng) {
-return new L.CircleMarker(latlng, {radius: 7, fillOpacity: 0.75});
-},
-onEachFeature: function (feature, layer) {
-layer.bindPopup('<b>' + 'Fatalities: ' + feature.properties.FATALITIES + '</b><br>' + 'Location: ' + feature.properties.LOCATION + '<br>' + 'Event Type: ' + feature.properties.EVENT_TYPE);
-}
-});
-  markers.addTo(map);
+markers = L.geoJson(parsedData).addTo(map);
 });
 $("#next-button").off();
 $("#next-button").on("click", function(){
@@ -170,10 +140,9 @@ $("#previous-button").on("click", function(){
   slide2(dataset);
   map.removeLayer(markers);
 });
-};*/
+};
 
-
-var slide4 = function(NGAboundaries) {
+var slide4 = function(dataset) {
   document.getElementById("previous-button").className = "button-previous";
   document.getElementById("next-button").className = "button-next-rest";
   $("#info").text("Clustering");
@@ -183,7 +152,7 @@ var slide4 = function(NGAboundaries) {
   $("#legend").hide();
   $("#link").hide();
   $("#next-button").hide();
-  $.ajax(NGAboundaries).done(function(data) {
+  $.ajax(dataset).done(function(data) {
     map.removeLayer(markers);
     var parsedData = JSON.parse(data);
     markers = L.markerClusterGroup();
