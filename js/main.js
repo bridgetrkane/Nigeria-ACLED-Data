@@ -129,7 +129,18 @@ $("#link").hide();
 $.ajax(data2).done(function(data) {
 map.removeLayer(markers);
 var parsedData = JSON.parse(data);
-markers = L.geoJson(parsedData).addTo(map);
+function style(feature) {
+    return {
+        fillColor: '#6E5550',
+        weight: 1.5,
+        opacity: 1,
+        color: '#4D3B38',
+        fillOpacity: 0.7
+    };
+}
+markers = L.geoJson(parsedData, {
+  style: style
+}).addTo(map);
 });
 $("#next-button").off();
 $("#next-button").on("click", function(){
