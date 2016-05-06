@@ -10,16 +10,21 @@
 </head>
 <body>
   <!-- Sidebar -->
-
-
-  <div class="sidebar" id="sidebar" style="overflow-x: scroll">
-    <h1 style="text-align:center">Events</h1>
+  <div class="sidebar">
+    <div id="results" style="display: none;">
+      <h1 class="day-of-week">Day of Week</h1>
+      <p class="main">Your garbage collection day is <span class="day-of-week">
+        Day of Week</span>.</p>
+        <p>Please be sure to leave your garbage outside on <span class="day-of-week">
+          Day of Week</span>. If this week is a federal holiday, leave your
+          garbage outside on the following day.</p>
+        </div>
     <div id="shapes"></div>
   </div>
 
   <div class="bottombar">
-  <div style="width: 40%; float:left; text-align: center">
-    <div id="intro; font-size: 18px;">
+  <div style="width: 40%; float:left">
+    <div id="intro">
     <h1>Trend Mapping in Nigeria:<br>A Case Study on Conflict Analysis</h1>
   </div>
 </div>
@@ -27,6 +32,7 @@
     <h2 id = "info" class="main"></h2>
     <p id = "info2" class="main"></p>
     <p id = "info3" class="main"></p>
+    <p id = "link" class="main"><a href="http://www.sfbos.org/">Click here to learn more!</a></p>
   </div>
   </div>
   <!-- Legend -->
@@ -44,10 +50,5 @@
     <script src="js/main.js"></script>
     <script src="js/points_rand.js"></script>
     <script src="js/leaflet.markercluster-src.js"></script>
-    <script src="js/setup.js"></script>
-    <script src="js/heatmap.js"></script>
-    <script src="js/leaflet.ajax.js"></script>
-    <script src="js/leaflet.ajax.min.js"></script>
-    <script src="js/leaflet-heat.js"></script>
   </body>
   </html>

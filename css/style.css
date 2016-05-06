@@ -1,12 +1,11 @@
 body {
     padding: 5px;
     overflow-y: hidden;
-    font-family: "Verdana", sans-serif;
 }
 
 h1 {
   color: #D1D0CE;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 h2 {
@@ -26,16 +25,13 @@ p.main {
 }
 
 .sidebar {
-    position: fixed;
-    left: 70%;
-    width: 275px;
-    z-index: 100;
+    position: absolute;
+    left: 0px;
+    width: 340px;
     top: 0;
-    bottom: 35%;
-    overflow-x: scroll;
+    bottom: 0;
+    overflow: visible;
     padding: 20px;
-    background-color: #113B3B;
-    color: #D1D0CE;
 }
 
 .street-selected path {
