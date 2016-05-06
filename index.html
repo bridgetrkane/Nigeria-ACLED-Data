@@ -10,35 +10,27 @@
 </head>
 <body>
   <!-- Sidebar -->
-  <div class="sidebar">
-    <div id="results" style="display: none;">
-      <h1 class="day-of-week">Day of Week</h1>
-      <p class="main">Your garbage collection day is <span class="day-of-week">
-        Day of Week</span>.</p>
-        <p>Please be sure to leave your garbage outside on <span class="day-of-week">
-          Day of Week</span>. If this week is a federal holiday, leave your
-          garbage outside on the following day.</p>
-        </div>
+  <div class="sidebar" id="sidebar" style="overflow-x: scroll; position: right">
+    <h1 style="text-align:center">Events</h1>
     <div id="shapes"></div>
   </div>
 
   <div class="bottombar">
-  <div style="width: 40%; float:left">
-    <div id="intro">
-    <h1>Trend Mapping in Nigeria:<br>A Case Study on Conflict Analysis</h1>
+  <div style="width: 300px; float:left">
+    <div id="intro; font-size: 18px;">
+    <h1>ACLED Analysis: Nigeria</h1>
   </div>
 </div>
-  <div style="width: 55%; float:right; padding-right: 40px">
-    <h2 id = "info" class="main"></h2>
-    <p id = "info2" class="main"></p>
-    <p id = "info3" class="main"></p>
-    <p id = "link" class="main"><a href="http://www.sfbos.org/">Click here to learn more!</a></p>
+  <div style="width: 500px; bottom: 50px; left: 450px; width: 550px; position: fixed;  padding-right: 40px; overflow-y: scroll">
+    <h2 id="info" class="main"></h2>
+    <p id="info2" class="main"></p>
+    <p id="info3" class="main"></p>
   </div>
   </div>
   <!-- Legend -->
   <button id="close">RESET MAP</button>
-  <button id = "previous-button">PREVIOUS</button>
-  <button id = "next-button" class = "button-next-1">NEXT</button>
+  <button id="previous-button" class="button-previous">PREVIOUS</button>
+  <button id="next-button" class="button-next-1">NEXT</button>
   <!-- Map -->
   <div id="map" class="map">
     <!-- Javascript Imports -->
@@ -50,5 +42,6 @@
     <script src="js/main.js"></script>
     <script src="js/points_rand.js"></script>
     <script src="js/leaflet.markercluster-src.js"></script>
+    <script src="js/leaflet-heat.js"></script>
   </body>
   </html>

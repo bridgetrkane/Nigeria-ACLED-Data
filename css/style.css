@@ -1,19 +1,21 @@
 body {
     padding: 5px;
-    overflow-y: hidden;
+    font-family: "Verdana", serif;
 }
 
 h1 {
   color: #D1D0CE;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 h2 {
   color: #D1D0CE;
+  font-size: 18px;
 }
 
 p.main {
   color: #D1D0CE;
+  font-size: 14px;
 }
 
 .map {
@@ -24,14 +26,23 @@ p.main {
     top: 0;
 }
 
+.shape {
+  font-size: 14px;
+  color: '#FFFFFF'
+}
+
 .sidebar {
-    position: absolute;
-    left: 0px;
-    width: 340px;
+    position: fixed;
+    left: 70%;
+    z-index: 100;
+    width: 275px;
     top: 0;
-    bottom: 0;
-    overflow: visible;
+    bottom: 35%;
+    overflow-y: scroll;
     padding: 20px;
+    background-color: #113B3B;
+    color: #D1D0CE;
+    border-radius: 3px;
 }
 
 .street-selected path {
@@ -52,7 +63,8 @@ p.main {
     height: 27%;
     left: 0;
     width: 100%;
-    overflow-y: hidden;
+    overflow-y: scroll;
+    overflow-y: scroll;
     padding: 20px;
     font-size: 16px;
     background-color: #081C1C;
@@ -63,7 +75,7 @@ p.main {
     position: fixed;
     z-index: 100;
     bottom: 50px;
-    left: 5%;
+    left: 75px;;
     background-color: #113B3B;
     border: none;
     color: #D1D0CE;
@@ -79,7 +91,7 @@ p.main {
     position: fixed;
     z-index: 100;
     bottom: 50px;
-    left: 20%;
+    left: 225px;
     width:120px;
     background-color: #113B3B;
     border: none;
@@ -170,7 +182,7 @@ p.main {
   position: fixed;
   z-index: 100;
   bottom: 50px;
-  left: 20%;
+  left: 225px;
   width: 140px;
   padding: 10px;
   background-color: #113B3B;
